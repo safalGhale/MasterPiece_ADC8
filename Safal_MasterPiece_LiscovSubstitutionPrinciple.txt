@@ -1,0 +1,18 @@
+Liscov Substitution Principle:
+
+public class Bird{
+    public void fly(){}
+}
+public class Duck extends Bird{}
+public class Ostrich extends Bird{}
+
+The above given example violates the principle of the LSP.
+So, the correct example for it is given below:
+
+public class Bird{
+}
+public class FlyingBirds extends Bird{
+    public void fly(){}
+}
+public class Duck extends FlyingBirds{}
+public class Ostrich extends Bird{} 
