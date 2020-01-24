@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>List of Recipes</title>
+</head>
+<body>
+    <h1> List of Recipes</h1>
+    {% for recipes in Recipes %}
+     Username : {{recipes.Username}} <br>
+     Dishname : {{recipes.Dishname}} <br>
+     Recipe : {{recipes.Recipe}}<br>
+    <a href="edit/{{recipes.id}}">Edit this</a> <br>
+    ======================================== <br>
+    {% empty %}
+        There are no Recipes availble.
+    {% endfor %}
+</body>
+</html>
